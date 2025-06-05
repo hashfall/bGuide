@@ -1,42 +1,59 @@
 {
-  "expo": {
-    "name": "bGuide",
-    "slug": "bGuide",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "bguide",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+    "expo": {
+        "android": {
+            "adaptiveIcon": {
+                "backgroundColor": "#ffffff",
+                "foregroundImage": "./assets/images/adaptive-icon.png"
+            },
+            "edgeToEdgeEnabled": true,
+            "package": "com.hashfall.bGuide",
+            "permissions": [
+                "BLUETOOTH",
+                "BLUETOOTH_ADMIN",
+                "BLUETOOTH_CONNECT",
+                "BLUETOOTH_SCAN",
+                "ACCESS_FINE_LOCATION"
+            ]
+        },
+        "experiments": {
+            "typedRoutes": true
+        },
+        "extra": {
+            "eas": {
+                "projectId": "50eda369-fd70-479c-bc90-2c473d76527a"
+            },
+            "router": {}
+        },
+        "icon": "./assets/images/icon.png",
+        "ios": {
+            "infoPlist": {
+                "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth to connect to ESP32 devices."
+            },
+            "supportsTablet": true
+        },
+        "name": "bGuide",
+        "newArchEnabled": true,
+        "orientation": "portrait",
+        "plugins": [
+            "expo-router",
+            [
+                "expo-splash-screen",
+                {
+                    "backgroundColor": "#ffffff",
+                    "image": "./assets/images/splash-icon.png",
+                    "imageWidth": 200,
+                    "resizeMode": "contain"
+                }
+            ]
+        ],
+        "scheme": "bguide",
+        "slug": "bGuide",
+        "userInterfaceStyle": "automatic",
+        "version": "1.0.0",
+        "web": {
+            "bundler": "metro",
+            "favicon": "./assets/images/favicon.png",
+            "output": "static"
         }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
     }
-  }
 }

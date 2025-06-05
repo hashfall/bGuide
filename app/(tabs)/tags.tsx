@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { styles } from '../../styles/index.styles';
 
-export default function bookmarks() {
+export default function Tags() {
     return (
         <View style={styles.container}>
-            <Text>bookmarks</Text>
+            <Text>Available Tags</Text>
         </View>
     );
 }
